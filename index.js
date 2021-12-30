@@ -21,6 +21,8 @@ let dotButton = document.querySelector('.dot-button')
 let body = document.querySelector('body')
 let logoIMG = document.querySelector('.logo-img')
 
+let text = document.querySelector('.text-container1')
+
 let switchBodyTheme = ()=>{
   body.classList.toggle('dark');
   body.classList.toggle('light');
@@ -32,12 +34,29 @@ let switchButtonTheme = ()=>{
   dotButton.classList.toggle('dark');
   dotButton.classList.toggle('light');
 }
+let switchLinksTheme = ()=>{
+  links.classList.toggle('dark')
+  links.classList.toggle('light')
+}
+
+let hideBurger = ()=>{
+  burger.classList.toggle('display-none')
+}
+
+let switchText = ()=>{
+  for(i = 10; i = -100; i--){
+    let = document.getElementById('text1').style.left(i, "%");
+  }
+}
+
 
 burger.addEventListener('click', ()=>{
   links.classList.toggle('open');
 })
 switchButton.addEventListener('click', ()=>{
   dotButton.classList.toggle('right');
-  switchButtonTheme()
+  switchButtonTheme();
   switchBodyTheme();
+  hideBurger();
+  switchText();
 })
